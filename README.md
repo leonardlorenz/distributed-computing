@@ -1,1 +1,1 @@
-# A collection of all the projects done in our distributed-computing course
+A collection of all the projects done in our distributed-computing course
