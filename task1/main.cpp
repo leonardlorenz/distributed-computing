@@ -3,7 +3,7 @@
 #include <sys/param.h>
 
 /**
- * char name[]:
+ * char hostname[]:
  *      a character array that stores the hostname
  * int MAXHOSTNAMELEN:
  *      constant provided by param.h, size of the hostname char[]
@@ -11,7 +11,7 @@
  *      writes the hostname to the char[] that gets parsed over
  **/
 int main(int argc, char** argv){
-    char name[MAXHOSTNAMELEN];
-    gethostname(name, sizeof name);
-    std::cout << name << std::endl;
+    char hostname[MAXHOSTNAMELEN];
+    gethostname(hostname, sizeof hostname);
+    std::cout << hostname << std::endl;
 }
