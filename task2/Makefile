@@ -1,5 +1,5 @@
 compile: main.o
-	g++ main.cpp -o main.o
+	gcc main.c -o main.o
 
 run:
 	./main.o
