@@ -8,7 +8,6 @@ class msg_receiver(Thread):
         Thread.__init__(self)
 
     def run(self):
-        print("initialized message receiver")
         while True:
             if main.STILL_RUNS == False:
                 break

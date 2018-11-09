@@ -25,9 +25,7 @@ def main():
     msg_send = msg_sender.msg_sender(CONN,send_ascii)
 
     msg_recv.start()
-    print("listening for messages...")
     msg_send.start()
-    print("Send a message!")
 
     msg_recv.join()
     msg_send.join()

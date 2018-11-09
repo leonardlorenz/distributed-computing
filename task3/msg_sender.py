@@ -9,7 +9,6 @@ class msg_sender(Thread):
         Thread.__init__(self)
 
     def run(self):
-        print("initialized message sender")
         while True:
             if main.STILL_RUNS == False:
                 break
