@@ -25,4 +25,4 @@ class msg_receiver(Thread):
                         # everything from the line after group notify
                         # to the line before protocol ender
                         for i in range(3, len(msg_arr) - 2):
-                            print(msg_arr[i])
+                            print("(" + msg_arr[2] + ") " + msg_arr[i])
