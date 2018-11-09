@@ -13,7 +13,7 @@ class msg_receiver(Thread):
                 break
             else:
                 BUFFERSIZE = 64000
-                packet = bytearray()
+                packet = bytearray(BUFFERSIZE)
                 try:
                     packet = self.CONN.recv(BUFFERSIZE)
                 except socket.timeout:
@@ -24,5 +24,5 @@ class msg_receiver(Thread):
                     if msg_arr[1] == "group notify":
                         # everything from the line after group notify
                         # to the line before protocol ender
-                        for i in range(2, len(msg_arr) - 2):
+                        for i in range(3, len(msg_arr) - 2):
                             print(msg_arr[i])

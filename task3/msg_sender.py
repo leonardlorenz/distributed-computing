@@ -36,5 +36,5 @@ class msg_sender(Thread):
                     "\n░░░░░░░░░░▀▀▄▄░▒▒▒▒▒▒▒▒▒▒░█"+
                     "\n░░░░░░░░░░░░░░▀▄▄▄▄▄░░░░░█")
                     time.sleep(5)
-                message = "dslp/1.1\r\n" + "group notify\r\n" + cli_input + "\r\n" + "dslp/end\r\n"
+                message = "dslp/1.1\r\n" + "group notify\r\n" + "Freitag-Teams\r\n" + cli_input + "\r\n" + "dslp/end\r\n"
                 self.CONN.sendall(message.encode('utf-8'))
