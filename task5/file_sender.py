@@ -3,7 +3,7 @@ import main
 import time
 import base64
 
-class msg_sender(Thread):
+class file_sender(Thread):
     def __init__(self, CONN, peer, filename):
         self.CONN = CONN
         self.peer = peer
