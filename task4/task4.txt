@@ -1,0 +1,71 @@
+#######################################################
+Test 1 - "ping 8.8.8.8"
+#######################################################
+
+Was ist die IP-Adresse des Empfängers lt. Wireshark?
+
+Destination: 8.8.8.8
+
+Was ist die MAC-Adresse des Empfängers lt. Wireshark?
+
+Destination: HuaweiTe_1d:ff:cf (58:1f:28:1d:ff:cf)
+
+Welche Art von Daten (Typ ID) transportiert das Ethernet-Paket?
+
+Internet Control Message Protocol (ICMP) - Type 8 (Echo (ping) request)
+
+Auf welcher OSI-Schicht ist das Protokoll einzuordnen?
+
+OSI-Layer 3 - Network Layer.
+
+Welche Art der Vermittlung (unicast, broadcast, multicast) nutzt dieses Protokoll?
+
+Unicast.
+
+#######################################################
+Test 2 - "ssh s72378@compute.beuth-hochschule.de"
+#######################################################
+
+Was ist die IP-Adresse des Empfängers lt. Wireshark?
+
+Destination (IPv6): 2a00:1450:400e:808::2004
+
+Was ist die MAC-Adresse des Empfängers lt. Wireshark?
+
+Destination: HuaweiTe_1d:ff:cf (58:1f:28:1d:ff:cf)
+
+Welche Art von Daten (Typ ID) transportiert das Ethernet-Paket?
+
+Transmission Control Protocol - TCP
+
+Auf welcher OSI-Schicht ist das Protokoll einzuordnen?
+
+OSI-Layer 4 - Transport Layer.
+
+Welche Art der Vermittlung (unicast, broadcast, multicast) nutzt dieses Protokoll?
+
+Unicast.
+
+#######################################################
+Test 3 - "wget test.com"
+#######################################################
+
+Was ist die IP-Adresse des Empfängers lt. Wireshark?
+
+Destination (IPv4): 2a00:1450:400e:808::2004
+
+Was ist die MAC-Adresse des Empfängers lt. Wireshark?
+
+Destination: HuaweiTe_1d:ff:cf (58:1f:28:1d:ff:cf)
+
+Welche Art von Daten (Typ ID) transportiert das Ethernet-Paket?
+
+User Datagram Protocol - UDP
+
+Auf welcher OSI-Schicht ist das Protokoll einzuordnen?
+
+OSI-Layer 4 - Transport Layer.
+
+Welche Art der Vermittlung (unicast, broadcast, multicast) nutzt dieses Protokoll?
+
+Unicast.
