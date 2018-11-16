@@ -5,6 +5,7 @@ from socket import *
 
 # stop variable, if set to False, program will stop.
 STILL_RUNS = True
+LINE_END = "\r\n"
 
 def main():
     # syntax:
@@ -47,12 +48,12 @@ def connect_to_beuth():
 def send_group_join_notify(CONN):
     # send message of type group join
     message = bytearray(4096)
-    message = "dslp/1.2\r\n" + "group join\r\n" + "Freitag-Teams\r\n" + "dslp/end\r\n"
+    message = "dslp/1.2" + LINE_END + "group join" + LINE_END + "Freitag-Teams" + LINE_END + "dslp/end" + LINE_END
     CONN.sendall(message.encode('utf-8'))
 
 def send_leave_group_notify(CONN):
     # send message of type group leave
-    message = "dslp/1.2\r\n" + "group leave\r\n" + "Freitag-Teams\r\n" + "dslp/end\r\n"
+    message = "dslp/1.2" + LINE_END + "group leave" + LINE_END + "Freitag-Teams" + LINE_END + "dslp/end" + LINE_END
     CONN.sendall(message.encode('utf-8'))
 
 if __name__ == '__main__':
