@@ -24,5 +24,5 @@ class msg_receiver(Thread):
                     if msg_arr[1] == "group notify":
                         # everything from the line after group notify
                         # to the line before protocol ender
-                        for i in range(3, len(msg_arr) - 2):
-                            print("(" + msg_arr[2] + ") " + msg_arr[i])
+                        print(msg_arr[2])
+                        Base64.decode(msg_arr[3])
