@@ -2,7 +2,7 @@ from threading import Thread
 import socket
 import main
 
-class msg_receiver(Thread):
+class file_receiver(Thread):
     def __init__(self, CONN):
         self.CONN = CONN
         Thread.__init__(self)
