@@ -12,17 +12,15 @@ class file_receiver(Thread):
             if main.STILL_RUNS == False:
                 break
             else:
-                BUFFERSIZE = 64000
-                packet = bytearray(BUFFERSIZE)
                 try:
-                    packet = self.CONN.recv(BUFFERSIZE)
+                    packet = self.CONN.recv()
+                    message = packet.decode('utf-8')
+                    msg_arr = message.split("\r\n")
+                    if msg_arr[0] == "dslp/1.2":
+                        if msg_arr[1] == "peer notify":
+                            # everything from the line after group notify
+                            # to the line before protocol ender
+                            for i in range(3, len(msg_arr) - 2):
+                                print("(" + msg_arr[2] + ") " + msg_arr[i])
                 except socket.timeout:
                     continue
-                message = packet.decode('utf-8')
-                msg_arr = message.split("\r\n")
-                if msg_arr[0] == "dslp/1.1":
-                    if msg_arr[1] == "group notify":
-                        # everything from the line after group notify
-                        # to the line before protocol ender
-                        for i in range(3, len(msg_arr) - 2):
-                            print("(" + msg_arr[2] + ") " + msg_arr[i])
