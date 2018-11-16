@@ -14,22 +14,21 @@ def main():
     filename = ""
     if sys.argv[1] == "send":
         if sys.argv[2].startswith("peer"):
-            peer = sys.argv[2].split("=")[1]
+            peer = sys.argv[2]
         if sys.argv[3].startswith("filename"):
-            filename = sys.argv[3].split("=")[1]
+            filename = sys.argv[3]
         if peer != "" and filename != "":
             print("connecting to server...")
             CONN = connect_to_beuth()
-            send = sender.file_sender(CONN, peer, filename)
+            send = sender.file_sender(connect_to_beuth, peer, filename)
             send.start()
 
     else if sys.argv[1] == "receive":
         if sys.argv[2].startswith("filename"):
-            filename = sys.argv[2].split("=")[1]
+            filename = sys.argv[2]
         if filename != "":
             print("connecting to server...")
-            CONN = connect_to_beuth()
-            recv = receiver.file_receiver(CONN, filename)
+            recv = receiver.file_receiver(connect_to_beuth()), filename)
             recv.start()
 
     recv.join()

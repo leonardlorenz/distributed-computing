@@ -1,5 +1,5 @@
-run:
-	python main.py
+run_sender:
+	python main.py send $(peer) $(filename)
 
-ascii:
-	python main.py ascii
+run_receiver:
+	python main.py receive $(filename)

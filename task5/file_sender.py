@@ -10,5 +10,5 @@ class msg_sender(Thread):
 
     def run(self):
         while main.STILL_RUNS:
-            message = "dslp/1.2\r\n" + "peer notify\r\n" + peer + "\r\n" + cli_input + "\r\n" + "dslp/end\r\n"
+            message = "dslp/1.2\r\n" + "peer notify\r\n" + peer + "\r\n" + input() + "\r\n" + "dslp/end\r\n"
             self.CONN.sendall(message.encode('utf-8'))
