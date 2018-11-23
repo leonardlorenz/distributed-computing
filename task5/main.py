@@ -1,6 +1,6 @@
 import sys
-import msg_sender
-import msg_receiver
+import file_sender
+import file_receiver
 from socket import *
 
 # stop variable, if set to False, program will stop.
@@ -13,30 +13,27 @@ def main():
     # make run_sender peer=255.255.255.255 filename=foo.txt
     peer = ""
     filename = ""
+    threads = []
     if sys.argv[1] == "send":
-        if sys.argv[2].startswith("peer"):
-            peer = sys.argv[2]
-        if sys.argv[3].startswith("filename"):
-            filename = sys.argv[3]
+        peer = sys.argv[2]
+        filename = sys.argv[3]
         if peer != "" and filename != "":
             print("connecting to server...")
             CONN = connect_to_beuth()
-            send = sender.file_sender(connect_to_beuth, peer, filename)
+            send = file_sender.file_sender(CONN, peer, filename)
             send.start()
+            send.join()
+            CONN.close()
 
-    else if sys.argv[1] == "receive":
-        if sys.argv[2].startswith("filename"):
-            filename = sys.argv[2]
+    elif sys.argv[1] == "receive":
+        filename = sys.argv[2]
         if filename != "":
             print("connecting to server...")
-            recv = receiver.file_receiver(connect_to_beuth()), filename)
+            CONN = connect_to_beuth()
+            recv = file_receiver.file_receiver(CONN, filename)
             recv.start()
-
-    recv.join()
-    send.join()
-
-    send_leave_group_notify(CONN)
-    CONN.close()
+            recv.join()
+            CONN.close()
 
 def connect_to_beuth():
     DOMAIN = "localhost"
