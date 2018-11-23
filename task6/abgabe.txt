@@ -1,0 +1,44 @@
+1)
+
+- Wie lautet der Filterausdruck für Wireshark, um nur die Netzwerkpakete des Ping-Kommandos (ICMP-Anfragen und ICMP-Antworten) anzuzeigen?
+
+"icmp" ohne Anführungszeichen.
+
+- Welche ICMP-Pakettypen werden von "ping" verwendet?
+
+Request: Type 8
+Reply: Type 0
+
+- Wie entstehen die verschiedenen Zahlen in der Bildschirmausgabe von "ping"? Welche sind direkt aus dem Paket ablesbar?
+
+"64 bytes" : Größe des versendeten Pakets
+"icmp_seq=1"...n : Anzahl der versendeten Ping Requests. Wird im Paket mit versendet und vom Empfänger unverändert zurückgeschickt.
+"ttl=116" Das TTL-Feld ist ein "Count-Down" mit einem vorinitialisierten Wert.
+Bei jedem Knoten bei dem das Netzwerkpaket landet reduziert sich der Counter.
+Wenn der Counter auf 0 sinkt, wird ein Netzwerkpaket signiert mit der Knoten IP-Addresse an den Absender zurückgeschickt.
+time=68.4 ms : Zeit die benötigt wurde um die Ping-Request abzuschicken und die Antwort wieder zu empfangen.
+
+2)
+
+- Wie lautet der Filterausdruck für Wireshark, um nur die Netzwerkpakete des Traceroute-Laufs (UDP-Anfragen und ICMP-Antworten) anzuzeigen?
+
+icmp || udp
+
+- Welche ICMP-Pakettypen werden von "traceroute" verwendet?
+Type 11 (Time-to-live exceeded)
+Type 3 (Destination unreachable)
+
+- Wie entstehen die verschiedenen Zahlen in der Bildschirmausgabe von "traceroute"? Welche sind direkt aus dem Paket ablesbar?
+
+Die Nummerierung steht für die Reihenfolge der bekannten Knoten auf der Route.
+Zahlen wie "108.170.241.193" sind die IP-Addressen von Rechnern die auf der Route ein Paket empfangen haben. Die IP-Addresse ist direkt im Paket ablesbar.
+Zeitangaben wie "2.248 ms" stehen für die Zeit, die benötigt wurde um eins der (by-default) 3 versendeten Pakete abzuschicken.
+
+- Welche Rolle spielt das TTL-Feld?
+
+Das TTL-Feld ist ein "Count-Down" mit einem vorinitialisierten Wert.
+Bei jedem Knoten bei dem das Netzwerkpaket landet reduziert sich der Counter.
+Wenn der Counter auf 0 sinkt, wird ein Netzwerkpaket signiert mit der Knoten IP-Addresse an den Absender zurückgeschickt.
+Bei traceroute werden Pakete absichtlich zuerst mit dem Counter 1 abgeschickt, damit die IP des ersten Knotens der Route bekannt wird.
+Danach wird ein Paket mit dem Counter 1+1 an die neue Addresse aus dem zurückgeschickten Paket abgeschickt, um die IP des zweiten Knotens auf die gleiche Art und Weise zu bekommen.
+Darauf wird der gleiche Schritt mit dem Counter 1+n wiederholt, wobei n für die Anzahl der bekannten Knoten steht.
