@@ -15,11 +15,12 @@ class file_sender(Thread):
         try:
             file_to_send = open(self.filename, "r")
             text = file_to_send.read()
-            base64.b64encode(text)
-            message = "dslp/1.2" + LINE_END + "peer notify" + LINE_END + peer + LINE_END + \
-            input() + LINE_END + file_as_text + LINE_END + "dslp/end" + LINE_END
+            file_as_text = base64.b64encode(text.encode('utf-8'))
+            message = "dslp/1.2" + LINE_END + "peer notify" + LINE_END + self.peer + LINE_END + input() + LINE_END + file_as_text.decode("utf-8") + LINE_END + "dslp/end" + LINE_END
+            print("message created")
             self.CONN.sendall(message.encode('utf-8'))
-        except:
+            print("message sent")
+        except IOError:
             print("Could not open " + self.filename + ". Are you sure you have read permissions on this file?")
             main.STILL_RUNS = False
 

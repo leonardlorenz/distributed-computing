@@ -36,8 +36,8 @@ def main():
             CONN.close()
 
 def connect_to_beuth():
-    DOMAIN = "localhost"
-    #DOMAIN = "dbl44.beuth-hochschule.de"
+    #DOMAIN = "localhost"
+    DOMAIN = "dbl44.beuth-hochschule.de"
     PORT = "44444"
     CONN = create_connection((DOMAIN, PORT), 5)
     return CONN
