@@ -17,7 +17,7 @@ class file_sender(Thread):
                 file_to_send = open(self.filename, "r")
                 text = file_to_send.read()
                 file_as_text = base64.b64encode(text.encode('utf-8'))
-                user_input = "hello world!"
+                user_input = input()
                 message = "dslp/1.2" + LINE_END + "peer notify" + LINE_END + self.peer + LINE_END + user_input + LINE_END + file_as_text.decode("utf-8") + LINE_END + "dslp/end" + LINE_END
                 self.CONN.sendall(message.encode('utf-8'))
                 print("message sent")
