@@ -1,0 +1,22 @@
+1)
+
+- Wie lautet der Filterausdruck für Wireshark, um nur die Netzwerkpakete des Ping-Kommandos (ICMP-Anfragen und ICMP-Antworten) anzuzeigen?
+
+"icmp" ohne Anführungszeichen.
+
+- Welche ICMP-Pakettypen werden von "ping" verwendet?
+
+Request: Type 8
+Reply: Type 0
+
+- Wie entstehen die verschiedenen Zahlen in der Bildschirmausgabe von "ping"? Welche sind direkt aus dem Paket ablesbar?
+
+2)
+
+- Wie lautet der Filterausdruck für Wireshark, um nur die Netzwerkpakete des Traceroute-Laufs (UDP-Anfragen und ICMP-Antworten) anzuzeigen?
+
+- Welche ICMP-Pakettypen werden von "traceroute" verwendet?
+
+- Wie entstehen die verschiedenen Zahlen in der Bildschirmausgabe von "traceroute"? Welche sind direkt aus dem Paket ablesbar?
+
+- Welche Rolle spielt das TTL-Feld?
