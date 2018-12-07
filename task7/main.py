@@ -10,6 +10,7 @@ KNOWN_CLIENTS = []
 
 def main():
     SOCK = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    print("Socket initialized")
     try:
         SOCK.bind((HOST, PORT))
     except socket.error as msg:
@@ -20,8 +21,8 @@ def main():
         conn, addr = SOCK.accept()
         print("Connected to " + addr[0] + ":" + str(addr[1]))
         client = {
-                "ADDR"    : addr
-                "CONN"  : conn
+                "ADDR" : addr,
+                "CONN" : conn
                 }
         KNOWN_CLIENTS.append(client)
         threading.Thread(None, listen_for_messages, None, conn, addr)
@@ -29,6 +30,7 @@ def main():
 def listen_for_messages(client):
     conn = client["CONN"]
     addr = client["ADDR"]
+    print("Listening for messages.")
     while IS_RUNNING:
         all_data = []
         data = bytearray(8192)
@@ -36,23 +38,30 @@ def listen_for_messages(client):
             conn.recv_into(data)
             all_data.append(data)
             all_data_str = ""
+            print("Received packet from " + client["ADDR"])
             for i in range(0, len(all_data)):
                 all_data_str = all_data_str + all_data[i]
             msg_arr = all_data_str.split("\r\n")
             if msg_arr[0] == "dslp/1.2":
                 if msg_arr[1] == "request time":
                     client_response_time(client)
+                    print("received request time")
                 elif msg_arr[1] == "group join":
                     client_group_join(msg_arr[2], client)
+                    print("received group join for group " + msg_arr[2])
                 elif msg_arr[1] == "group leave":
                     client_group_leave(msg_arr[2], client)
+                    print("received group leave for group " + msg_arr[2])
                 elif msg_arr[1] == "group notify":
-                    client_group_notify(msg_arr[2], msg_arr[3], msg_arr[4], client)
+                    client_group_notify(msg_arr[2], msg_arr[3], client)
+                    print("received group notify for group " + msg_arr[2] + " with the message \"" + msg_arr[3] + "\"")
                 elif msg_arr[1] == "peer notify":
-                    client_peer_notify(client)
+                    client_group_notify(msg_arr[2], msg_arr[3], msg_arr[4], client)
+                    print("received peer notify for client " + client["ADDR"])
                 else:
-                    send_error(client)
+                    send_error("Not a valid message type.", client)
         except:
+            print("Connection with client " + client["ADDR"] + " broke up.")
             KNOWN_CLIENTS.remove(client)
 
 def client_response_time(client):
@@ -69,8 +78,8 @@ def client_group_join(group_name, client):
     addr = client["ADDR"]
     group_exists = False
     group_index = 0
-    for i in range(0, len(GROUPS):
-        if group_name in GROUPS[i]["NAME"]
+    for i in range(0, len(GROUPS)):
+        if group_name == GROUPS[i].get_group_name():
             group_exists = True
             GROUPS[i].add_member(conn, addr)
     if not group_exists:
@@ -84,12 +93,14 @@ def client_group_leave(group_name, client):
     group_exists = False
     group_is_member = False
     group_index = 0
-    for i in range(0, len(GROUPS):
-        if group_name in GROUPS[i]["NAME"]
+    for i in range(0, len(GROUPS)):
+        if group_name == GROUPS[i].get_group_name():
             group_exists = True
-            if (str(conn) + str(addr)) in GROUPS[i].get_members()["ID"]
-                group_is_member = True
-                GROUPS[i].remove_member(conn, addr)
+            group_members = GROUPS[i].get_members()
+            for x in range(0, len(group_members)):
+                if (str(conn) + str(addr)) == group_members[x]["ID"]:
+                    group_is_member = True
+                    GROUPS[i].remove_member(conn, addr)
     if not group_exists:
         message = "dslp/1.2\r\n" + "error\r\n" + "The specified group doesn't exist.\r\n" + "dslp/end\r\n"
         send_error(conn, addr, error)
@@ -104,9 +115,9 @@ def client_group_notify(group_name, msg, client):
     group_is_member = False
     group_index = 0
     for i in range(0, len(GROUPS)):
-        if group_name in GROUPS[i]["NAME"]
+        if group_name == GROUPS[i].get_group_name():
             group_exists = True
-            if (str(conn) + str(addr)) in GROUPS[i].get_members()["ID"]
+            if (str(conn) + str(addr)) in GROUPS[i].get_members()["ID"]:
                 group_is_member = True
                 GROUPS[i].notify(msg)
     if not group_exists:
@@ -119,14 +130,14 @@ def client_group_notify(group_name, msg, client):
 def client_peer_notify(peer, msg, file_str, client):
     conn = client["CONN"]
     addr = client["ADDR"]
-    for i in range(0, len(KNOWN_CLIENTS))
-        if addr == KNOWN_CLIENTS[i]["ADDR"]
+    for i in range(0, len(KNOWN_CLIENTS)):
+        if addr == KNOWN_CLIENTS[i]["ADDR"]:
             message = "dslp/1.2\r\n" + "peer notify\r\n" + peer + "\r\n" + msg + "\r\n" + file_str + "\r\n" + "dslp/end\r\n"
             KNOWN_CLIENTS[i]["CONN"].sendall(message.encode("UTF-8"))
 
-def send_error(conn, addr, error):
+def send_error(error, client):
     message = "dslp/1.2\r\n" + "error\r\n" + str(error) + "\r\n" + "dslp/end\r\n"
     conn.sendall(message.encode("utf-8"))
 
 if __name__ == "__main__":
-    main(conn, addr)
+    main()

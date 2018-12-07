@@ -12,8 +12,8 @@ class group:
 
     def add_member(self, conn, addr):
         group_member = {
-            "ID"   : str(conn) + str(addr)
-            "CONN" : conn
+            "ID"   : str(conn) + str(addr),
+            "CONN" : conn,
             "ADDR" : addr
                 }
         self.group_members.append(group_member)
@@ -31,3 +31,6 @@ class group:
 
     def get_members():
         return self.group_members
+
+    def get_group_name():
+        return self.group_name
