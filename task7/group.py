@@ -3,7 +3,6 @@ class group:
     def __init__(self, group_name, group_id):
         self.group_members = []
         self.group_name = group_name
-        self.group_id = group_name
 
     def __init__(self, group_name, group_id, group_members):
         self.group_members = []
@@ -20,6 +19,15 @@ class group:
         self.group_members.append(group_member)
 
     def remove_member(self, conn, addr):
-        for group_member in group_members:
-            if group_member["CONN"] == conn and group_member["ADDR"] == addr:
-                group_members.remove(group_member)
+        for i in range(0, len(group_members)):
+            if (str(conn) + str(addr)) in group_members[i]["ID"]:
+                group_members.remove(group_members[i])
+
+    def notify(msg):
+        for i in range(0, len(group_members)):
+            conn = group_members[i]["CONN"]
+            addr = group_members[i]["ADDR"]
+            conn.sendall(message = "dslp/1.2\r\n" + "group notify\r\n" + self.group_name + "\r\n" + msg + "\r\n" + "dslp/end\r\n")
+
+    def get_members():
+        return self.group_members
