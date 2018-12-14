@@ -1,16 +1,20 @@
 from socket import *
 import base64
 import time
+import receiver
 
 DOMAIN = "88.198.53.236"
 PORT = 80
 PEER = "141.64.167.222"
 FILENAME = "test.txt"
 LINE_END = "\r\n"
+IS_RUNNING = True
 
 def main():
     print("creating connection")
     CONN = create_connection((DOMAIN, PORT), 3)
+    msg_receiver = receiver.receiver(CONN)
+    msg_receiver.start()
     print("requesting time")
     request_time(CONN)
     print("joining group")
@@ -21,6 +25,8 @@ def main():
     group_leave(CONN)
     print("notifying peer")
     peer_notify(CONN)
+    IS_RUNNING = False
+    time.sleep(1)
     CONN.close()
 
 def peer_notify(CONN):
@@ -40,11 +46,6 @@ def peer_notify(CONN):
 def request_time(CONN):
     message = "dslp/1.2" + LINE_END + "request time" + LINE_END + "dslp/end" + LINE_END
     CONN.sendall(message.encode('utf-8'))
-    data = bytearray(8192)
-    CONN.recv_into(data)
-    data_str = data.decode("utf-8").split("\r\n")
-    if data_str[1] == "response time":
-        print("Current server time: " + data_str[2])
 
 # send message of type group join
 def group_join(CONN):

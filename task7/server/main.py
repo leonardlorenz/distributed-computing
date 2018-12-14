@@ -31,7 +31,6 @@ def main():
         KNOWN_CLIENTS.append(client)
         thread = threading.Thread(None, listen_for_messages, None, (client,))
         thread.start()
-        
 
 def listen_for_messages(client):
     conn = client["CONN"]
