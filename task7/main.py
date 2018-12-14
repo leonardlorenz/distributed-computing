@@ -1,6 +1,7 @@
 import socket
 import threading
 import time
+import group
 
 HOST = "88.198.53.236"
 PORT = 80
@@ -36,17 +37,12 @@ def listen_for_messages(client):
     conn = client["CONN"]
     addr = client["ADDR"]
     print("Listening for messages.")
-    while IS_RUNNING:
-        all_data = []
-        data = bytearray(8192)
+    CLIENT_ALIVE = True
+    while CLIENT_ALIVE:
         try:
-            conn.recv_into(data)
-            all_data.append(data)
-            all_data_str = ""
-            print("Received packet from " + str(addr))
-            for i in range(0, len(all_data)):
-                all_data_str = all_data_str + all_data[i].decode("utf-8")
-            msg_arr = all_data_str.split("\r\n")
+            data = recv_all(conn)
+            data_str = data.decode("utf-8")
+            msg_arr = data_str.split("\r\n")
             if msg_arr[0] == "dslp/1.2":
                 if msg_arr[1] == "request time":
                     client_response_time(client)
@@ -66,8 +62,20 @@ def listen_for_messages(client):
                 else:
                     send_error("Not a valid message type.", client)
         except:
-            print("Connection with client " + client["ADDR"] + " broke up.")
+            print("Connection with client " + str(addr) + " broke up.")
+            CLIENT_ALIVE = False
             KNOWN_CLIENTS.remove(client)
+
+def recv_all(sock):
+    BUFF_SIZE = 4096 # 4 KiB
+    data = b''
+    while True:
+        part = sock.recv(BUFF_SIZE)
+        data += part
+        if len(part) < BUFF_SIZE:
+            # either 0 or end of data
+            break
+    return data
 
 def client_response_time(client):
     conn = client["CONN"]
