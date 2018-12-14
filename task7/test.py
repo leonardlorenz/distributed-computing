@@ -1,18 +1,28 @@
 from socket import *
+import base64
+import time
 
-DOMAIN = "metr1xx.de"
-PORT = 44444
+DOMAIN = "88.198.53.236"
+PORT = 80
 PEER = "141.64.167.222"
 FILENAME = "test.txt"
 LINE_END = "\r\n"
 
 def main():
-    CONN = create_connection((DOMAIN, PORT), 5)
+    print("creating connection")
+    CONN = create_connection((DOMAIN, PORT), 3)
+    time.sleep(1)
+    print("requesting time")
     request_time(CONN)
+    print("joining group")
     group_join(CONN)
-    notify_group(CONN)
+    print("notifying group")
+    group_notify(CONN)
+    print("leaving group")
     group_leave(CONN)
+    print("notifying peer")
     peer_notify(CONN)
+    CONN.close()
 
 def peer_notify(CONN):
     file_as_text = bytearray()
@@ -44,6 +54,9 @@ def group_notify(CONN):
     CONN.sendall(message.encode('utf-8'))
 
 # send message of type group leave
-def leave_group(CONN):
+def group_leave(CONN):
     message = "dslp/1.2" + LINE_END + "group leave" + LINE_END + "Freitag-Teams" + LINE_END + "dslp/end" + LINE_END
     CONN.sendall(message.encode('utf-8'))
+
+if __name__ == "__main__":
+    main()
