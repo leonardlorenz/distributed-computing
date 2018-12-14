@@ -37,8 +37,7 @@ def listen_for_messages(client):
     conn = client["CONN"]
     addr = client["ADDR"]
     print("Listening for messages.")
-    CLIENT_ALIVE = True
-    while CLIENT_ALIVE:
+    while IS_RUNNING:
         try:
             data = recv_all(conn)
             data_str = data.decode("utf-8")
@@ -63,7 +62,6 @@ def listen_for_messages(client):
                     send_error("Not a valid message type.", client)
         except:
             print("Connection with client " + str(addr) + " broke up.")
-            CLIENT_ALIVE = False
             KNOWN_CLIENTS.remove(client)
 
 def recv_all(sock):
@@ -115,11 +113,11 @@ def client_group_leave(group_name, client):
                     group_is_member = True
                     GROUPS[i].remove_member(conn, addr)
     if not group_exists:
-        message = "dslp/1.2\r\n" + "error\r\n" + "The specified group doesn't exist.\r\n" + "dslp/end\r\n"
-        send_error(conn, addr, error)
+        message = "The specified group doesn't exist."
+        send_error(message, client)
     if not group_is_member:
-        message = "dslp/1.2\r\n" + "error\r\n" + "User is not member of the specified group. You can't leave a group that you're not a member of.\r\n" + "dslp/end\r\n"
-        send_error(conn, addr, error)
+        message = "User is not member of the specified group. You can't leave a group that you're not a member of."
+        send_error(message, client)
 
 def client_group_notify(group_name, msg, client):
     conn = client["CONN"]
@@ -134,11 +132,11 @@ def client_group_notify(group_name, msg, client):
                 group_is_member = True
                 GROUPS[i].notify(msg)
     if not group_exists:
-        message = "dslp/1.2\r\n" + "error\r\n" + "The specified group doesn't exist.\r\n" + "dslp/end\r\n"
-        send_error(conn, addr, error)
+        message = "The specified group doesn't exist"
+        send_error(message, client)
     if not group_is_member:
-        message = "dslp/1.2\r\n" + "error\r\n" + "User is not member of the specified group. You can't send a message to a group that you're not a member of.\r\n" + "dslp/end\r\n"
-        send_error(conn, addr, error)
+        message = "User is not member of the specified group. You can't send a message to a group that you're not a member of."
+        send_error(message, client)
 
 def client_peer_notify(peer, msg, file_str, client):
     conn = client["CONN"]
@@ -149,6 +147,8 @@ def client_peer_notify(peer, msg, file_str, client):
             KNOWN_CLIENTS[i]["CONN"].sendall(message.encode("UTF-8"))
 
 def send_error(error, client):
+    conn = client["CONN"]
+    addr = client["ADDR"]
     message = "dslp/1.2\r\n" + "error\r\n" + str(error) + "\r\n" + "dslp/end\r\n"
     conn.sendall(message.encode("utf-8"))
 
