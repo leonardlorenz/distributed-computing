@@ -1,6 +1,7 @@
 import socket
 import threading
 import time
+import group
 
 HOST = "88.198.53.236"
 PORT = 80
@@ -37,16 +38,10 @@ def listen_for_messages(client):
     addr = client["ADDR"]
     print("Listening for messages.")
     while IS_RUNNING:
-        all_data = []
-        data = bytearray(8192)
         try:
-            conn.recv_into(data)
-            all_data.append(data)
-            all_data_str = ""
-            print("Received packet from " + str(addr))
-            for i in range(0, len(all_data)):
-                all_data_str = all_data_str + all_data[i].decode("utf-8")
-            msg_arr = all_data_str.split("\r\n")
+            data = recv_all(conn)
+            data_str = data.decode("utf-8")
+            msg_arr = data_str.split("\r\n")
             if msg_arr[0] == "dslp/1.2":
                 if msg_arr[1] == "request time":
                     client_response_time(client)
@@ -66,8 +61,19 @@ def listen_for_messages(client):
                 else:
                     send_error("Not a valid message type.", client)
         except:
-            print("Connection with client " + client["ADDR"] + " broke up.")
+            print("Connection with client " + str(addr) + " broke up.")
             KNOWN_CLIENTS.remove(client)
+
+def recv_all(sock):
+    BUFF_SIZE = 4096 # 4 KiB
+    data = b''
+    while True:
+        part = sock.recv(BUFF_SIZE)
+        data += part
+        if len(part) < BUFF_SIZE:
+            # either 0 or end of data
+            break
+    return data
 
 def client_response_time(client):
     conn = client["CONN"]
@@ -107,11 +113,11 @@ def client_group_leave(group_name, client):
                     group_is_member = True
                     GROUPS[i].remove_member(conn, addr)
     if not group_exists:
-        message = "dslp/1.2\r\n" + "error\r\n" + "The specified group doesn't exist.\r\n" + "dslp/end\r\n"
-        send_error(conn, addr, error)
+        message = "The specified group doesn't exist."
+        send_error(message, client)
     if not group_is_member:
-        message = "dslp/1.2\r\n" + "error\r\n" + "User is not member of the specified group. You can't leave a group that you're not a member of.\r\n" + "dslp/end\r\n"
-        send_error(conn, addr, error)
+        message = "User is not member of the specified group. You can't leave a group that you're not a member of."
+        send_error(message, client)
 
 def client_group_notify(group_name, msg, client):
     conn = client["CONN"]
@@ -126,11 +132,11 @@ def client_group_notify(group_name, msg, client):
                 group_is_member = True
                 GROUPS[i].notify(msg)
     if not group_exists:
-        message = "dslp/1.2\r\n" + "error\r\n" + "The specified group doesn't exist.\r\n" + "dslp/end\r\n"
-        send_error(conn, addr, error)
+        message = "The specified group doesn't exist"
+        send_error(message, client)
     if not group_is_member:
-        message = "dslp/1.2\r\n" + "error\r\n" + "User is not member of the specified group. You can't send a message to a group that you're not a member of.\r\n" + "dslp/end\r\n"
-        send_error(conn, addr, error)
+        message = "User is not member of the specified group. You can't send a message to a group that you're not a member of."
+        send_error(message, client)
 
 def client_peer_notify(peer, msg, file_str, client):
     conn = client["CONN"]
@@ -141,6 +147,8 @@ def client_peer_notify(peer, msg, file_str, client):
             KNOWN_CLIENTS[i]["CONN"].sendall(message.encode("UTF-8"))
 
 def send_error(error, client):
+    conn = client["CONN"]
+    addr = client["ADDR"]
     message = "dslp/1.2\r\n" + "error\r\n" + str(error) + "\r\n" + "dslp/end\r\n"
     conn.sendall(message.encode("utf-8"))
 
