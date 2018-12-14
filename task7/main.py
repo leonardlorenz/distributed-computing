@@ -2,20 +2,23 @@ import socket
 import threading
 import time
 
-HOST = ""
-PORT = 44444
+HOST = "88.198.53.236"
+PORT = 80
 IS_RUNNING = True
 GROUPS = []
 KNOWN_CLIENTS = []
 
 def main():
+    print("initializing socket")
     SOCK = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    print("Socket initialized")
+    print("trying to bind")
     try:
         SOCK.bind((HOST, PORT))
+        print("bound!")
     except socket.error as msg:
         print("Bind failed. Error Code : " + str(msg[0]) + " Message " + msg[1])
         sys.exit()
+    print("listening")
     SOCK.listen(10)
     while IS_RUNNING:
         conn, addr = SOCK.accept()
@@ -25,7 +28,9 @@ def main():
                 "CONN" : conn
                 }
         KNOWN_CLIENTS.append(client)
-        threading.Thread(None, listen_for_messages, None, conn, addr)
+        thread = threading.Thread(None, listen_for_messages, None, (client,))
+        thread.start()
+        
 
 def listen_for_messages(client):
     conn = client["CONN"]
@@ -38,9 +43,9 @@ def listen_for_messages(client):
             conn.recv_into(data)
             all_data.append(data)
             all_data_str = ""
-            print("Received packet from " + client["ADDR"])
+            print("Received packet from " + str(addr))
             for i in range(0, len(all_data)):
-                all_data_str = all_data_str + all_data[i]
+                all_data_str = all_data_str + all_data[i].decode("utf-8")
             msg_arr = all_data_str.split("\r\n")
             if msg_arr[0] == "dslp/1.2":
                 if msg_arr[1] == "request time":
