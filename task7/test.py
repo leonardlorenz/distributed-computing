@@ -21,7 +21,6 @@ def main():
     group_leave(CONN)
     print("notifying peer")
     peer_notify(CONN)
-    time.sleep(5)
     CONN.close()
 
 def peer_notify(CONN):
