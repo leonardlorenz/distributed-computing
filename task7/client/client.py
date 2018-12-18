@@ -11,19 +11,19 @@ LINE_END = "\r\n"
 IS_RUNNING = True
 
 def main():
-    print("creating connection")
+    print("--- creating connection")
     CONN = create_connection((DOMAIN, PORT), 3)
     msg_receiver = receiver.receiver(CONN)
     msg_receiver.start()
-    print("requesting time")
+    print("--- requesting time")
     request_time(CONN)
-    print("joining group")
+    print("--- joining group")
     group_join(CONN)
-    print("notifying group")
+    print("--- notifying group")
     group_notify(CONN)
-    print("leaving group")
+    print("--- leaving group")
     group_leave(CONN)
-    print("notifying peer")
+    print("--- notifying peer")
     peer_notify(CONN)
     IS_RUNNING = False
     time.sleep(1)
@@ -40,7 +40,6 @@ def peer_notify(CONN):
     user_input = "hellow peer"
     message = "dslp/1.2" + LINE_END + "peer notify" + LINE_END + PEER + LINE_END + user_input + LINE_END + file_as_text.decode("utf-8") + LINE_END + "dslp/end" + LINE_END
     CONN.sendall(message.encode('utf-8'))
-    print("message sent")
 
 # request server time
 def request_time(CONN):
