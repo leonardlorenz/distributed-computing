@@ -38,7 +38,7 @@ def listen_for_messages(client):
     print("Listening for messages.")
     while IS_RUNNING:
         try:
-            data = recv_all(conn)
+            data = recv_to_end(conn)
             data_str = data.decode("utf-8")
             msg_arr = data_str.split("\r\n")
             if msg_arr[0] == "dslp/1.2":
@@ -63,16 +63,17 @@ def listen_for_messages(client):
             print("Connection with client " + str(addr) + " broke up.")
             KNOWN_CLIENTS.remove(client)
 
-def recv_all(sock):
-    BUFF_SIZE = 4096 # 4 KiB
-    data = b''
-    while True:
-        part = sock.recv(BUFF_SIZE)
-        data += part
-        if len(part) < BUFF_SIZE:
-            # either 0 or end of data
-            break
-    return data
+def recv_to_end(self, CONN):
+    all_data_str
+    ended = False
+    while not ended
+        data = CONN.recv(4096)
+        data_str = data.decode("utf-8")
+        protocol_lines = data_str.split("\r\n")
+        for line in protocol_lines:
+            if line == ("dslp/end")
+                ended = true
+        
 
 def client_response_time(client):
     conn = client["CONN"]
