@@ -29,51 +29,45 @@ def main():
                 "CONN" : conn
                 }
         KNOWN_CLIENTS.append(client)
+        print(KNOWN_CLIENTS)
         thread = threading.Thread(None, listen_for_messages, None, (client,))
         thread.start()
 
 def listen_for_messages(client):
     conn = client["CONN"]
     addr = client["ADDR"]
-    print("Listening for messages.")
     while IS_RUNNING:
-        try:
-            data = recv_to_end(conn)
-            data_str = data.decode("utf-8")
-            msg_arr = data_str.split("\r\n")
-            if msg_arr[0] == "dslp/1.2":
-                if msg_arr[1] == "request time":
-                    client_response_time(client)
-                    print("received request time")
-                elif msg_arr[1] == "group join":
-                    client_group_join(msg_arr[2], client)
-                    print("received group join for group " + msg_arr[2])
-                elif msg_arr[1] == "group leave":
-                    client_group_leave(msg_arr[2], client)
-                    print("received group leave for group " + msg_arr[2])
-                elif msg_arr[1] == "group notify":
-                    client_group_notify(msg_arr[2], msg_arr[3], client)
-                    print("received group notify for group " + msg_arr[2] + " with the message \"" + msg_arr[3] + "\"")
-                elif msg_arr[1] == "peer notify":
-                    client_group_notify(msg_arr[2], msg_arr[3], msg_arr[4], client)
-                    print("received peer notify for client " + client["ADDR"])
-                else:
-                    send_error("Not a valid message type.", client)
-        except:
-            print("Connection with client " + str(addr) + " broke up.")
-            KNOWN_CLIENTS.remove(client)
-
-def recv_to_end(self, CONN):
-    all_data_str
-    ended = False
-    while not ended
-        data = CONN.recv(4096)
+        data = recv_to_end(conn)
         data_str = data.decode("utf-8")
-        protocol_lines = data_str.split("\r\n")
-        for line in protocol_lines:
-            if line == ("dslp/end")
-                ended = true
-        
+        msg_arr = data_str.split("\r\n")
+        if msg_arr[0] == "dslp/1.2":
+            if msg_arr[1] == "request time":
+                client_response_time(client)
+                print("received request time")
+            elif msg_arr[1] == "group join":
+                client_group_join(msg_arr[2], client)
+                print("received group join for group " + msg_arr[2])
+            elif msg_arr[1] == "group leave":
+                client_group_leave(msg_arr[2], client)
+                print("received group leave for group " + msg_arr[2])
+            elif msg_arr[1] == "group notify":
+                client_group_notify(msg_arr[2], msg_arr[3], client)
+                print("received group notify for group " + msg_arr[2] + " with the message \"" + msg_arr[3] + "\"")
+            elif msg_arr[1] == "peer notify":
+                client_group_notify(msg_arr[2], msg_arr[3], msg_arr[4], client)
+                print("received peer notify for client " + client["ADDR"])
+            else:
+                send_error("Not a valid message type.", client)
+
+def recv_to_end(CONN):
+    ended = False
+    data = CONN.recv(4096)
+    data_str = data.decode("utf-8")
+    protocol_lines = data_str.split("\r\n")
+    for line in protocol_lines:
+        if line == ("dslp/end"):
+            print(protocol_lines[1])
+            ended = True
 
 def client_response_time(client):
     conn = client["CONN"]
