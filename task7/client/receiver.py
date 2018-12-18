@@ -25,14 +25,14 @@ class receiver(Thread):
                     print("Current server time: " + msg_arr[2])
 
     def recv_to_end(self, CONN):
-        all_data_str = ""
         ended = False
         while not ended:
             data = CONN.recv(4096)
             data_str = data.decode("utf-8")
             protocol_lines = data_str.split("\r\n")
-            print(data_str)
             for line in protocol_lines:
                 if line == ("dslp/end"):
+                    print(protocol_lines[1])
                     ended = True
-                    print("dlsp/end")
+                    break
+            return data
