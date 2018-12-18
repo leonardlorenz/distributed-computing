@@ -25,8 +25,8 @@ def main():
     group_leave(CONN)
     print("--- notifying peer")
     peer_notify(CONN)
-    IS_RUNNING = False
-    time.sleep(1)
+    while IS_RUNNING:
+        time.sleep(1)
     CONN.close()
 
 def peer_notify(CONN):

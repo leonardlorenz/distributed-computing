@@ -10,7 +10,7 @@ class receiver(Thread):
     def run(self):
         conn = self.CONN
         while client.IS_RUNNING:
-            packet = self.recv_all(self.CONN)
+            packet = self.recv_to_end(self.CONN)
             message = packet.decode('utf-8')
             msg_arr = message.split("\r\n")
             if msg_arr[0] == "dslp/1.2":
@@ -24,13 +24,15 @@ class receiver(Thread):
                 if msg_arr[1] == "response time":
                     print("Current server time: " + msg_arr[2])
 
-    def recv_all(self, conn):
-        BUFF_SIZE = 4096 # 4 KiB
-        data = b''
-        while True:
-            part = conn.recv(BUFF_SIZE)
-            data += part
-            if len(part) < BUFF_SIZE:
-                # either 0 or end of data
-                break
-        return data
+    def recv_to_end(self, CONN):
+        all_data_str = ""
+        ended = False
+        while not ended:
+            data = CONN.recv(4096)
+            data_str = data.decode("utf-8")
+            protocol_lines = data_str.split("\r\n")
+            print(data_str)
+            for line in protocol_lines:
+                if line == ("dslp/end"):
+                    ended = True
+                    print("dlsp/end")
