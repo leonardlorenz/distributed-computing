@@ -3,10 +3,8 @@ import base64
 import time
 import receiver
 
-#DOMAIN = "88.198.53.236"
-DOMAIN = "141.64.171.200"
-PORT = 44444
-#PORT = 80
+DOMAIN = "88.198.53.236"
+PORT = 80
 PEER = "141.64.170.91"
 FILENAME = "test.txt"
 LINE_END = "\r\n"
@@ -27,7 +25,7 @@ def main():
     group_notify(CONN)
     time.sleep(1)
     print("--- leaving group")
-    group_leave(CONN)
+    #group_leave(CONN)
     time.sleep(1)
     print("--- notifying peer")
     peer_notify(CONN)
