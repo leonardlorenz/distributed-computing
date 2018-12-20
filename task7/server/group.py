@@ -22,7 +22,10 @@ class group:
             conn = member["CONN"]
             addr = member["ADDR"]
             message = ("dslp/1.2\r\n" + "group notify\r\n" + self.group_name + "\r\n" + msg + "\r\n" + "dslp/end\r\n")
-            conn.sendall(message.encode("utf-8"))
+            try:
+                conn.sendall(message.encode("utf-8"))
+            except:
+                print("Connection with client " + str(addr) + " broke up.")
 
     def get_members(self):
         return self.group_members
