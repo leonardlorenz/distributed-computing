@@ -1,0 +1,956 @@
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+^CFatal Python error: initsite: Failed to import the site module
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/site.py", line 579, in <module>
+    main()
+  File "/usr/lib/python3.7/site.py", line 566, in main
+    known_paths = addsitepackages(known_paths)
+  File "/usr/lib/python3.7/site.py", line 349, in addsitepackages
+    addsitedir(sitedir, known_paths)
+  File "/usr/lib/python3.7/site.py", line 207, in addsitedir
+    addpackage(sitedir, name, known_paths)
+  File "/usr/lib/python3.7/site.py", line 168, in addpackage
+    exec(line)
+  File "<string>", line 1, in <module>
+  File "/usr/lib/python3.7/importlib/util.py", line 14, in <module>
+    from contextlib import contextmanager
+  File "/usr/lib/python3.7/contextlib.py", line 165, in <module>
+    AbstractAsyncContextManager):
+  File "/usr/lib/python3.7/abc.py", line 127, in __new__
+    _abc_init(cls)
+KeyboardInterrupt
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+^C--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+^CTraceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+KeyboardInterrupt
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+^CTraceback (most recent call last):
+  File "client.py", line 1, in <module>
+    from socket import *
+  File "/usr/lib/python3.7/socket.py", line 53, in <module>
+    from enum import IntEnum, IntFlag
+  File "/usr/lib/python3.7/enum.py", line 656, in <module>
+    class Flag(Enum):
+  File "/usr/lib/python3.7/enum.py", line 708, in Flag
+    def __contains__(self, other):
+  File "/usr/lib/python3.7/enum.py", line 78, in __setitem__
+    if _is_sunder(key):
+  File "/usr/lib/python3.7/enum.py", line 37, in _is_sunder
+    name[1:2] != '_' and
+KeyboardInterrupt
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+^C--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+^CFatal Python error: initsite: Failed to import the site module
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/os.py", line 42, in _get_exports_list
+    return list(module.__all__)
+AttributeError: module 'posix' has no attribute '__all__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/site.py", line 73, in <module>
+    import os
+  File "/usr/lib/python3.7/os.py", line 65, in <module>
+    __all__.extend(_get_exports_list(posix))
+  File "/usr/lib/python3.7/os.py", line 44, in _get_exports_list
+    return [n for n in dir(module) if n[0] != '_']
+KeyboardInterrupt
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+^CFatal Python error: init_sys_streams: can't initialize sys standard streams
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/encodings/latin_1.py", line 28, in <module>
+    class StreamWriter(Codec,codecs.StreamWriter):
+KeyboardInterrupt
+^Z--- creating connection
+^ZTraceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+^Z--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+^Z--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+^Z--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+^Z--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+^Z--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+^Z--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+^Z--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+Traceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 17, in main
+    CONN = create_connection((DOMAIN, PORT), 3)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+--- creating connection
+--- requesting time
+--- joining group
+--- notifying group
+--- leaving group
+--- notifying peer
+^CTraceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 35, in main
+    time.sleep(1)
+KeyboardInterrupt
+--- creating connection
+--- requesting time
+--- joining group
+--- notifying group
+--- leaving group
+^CTraceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 31, in main
+    time.sleep(1)
+KeyboardInterrupt
+--- creating connection
+--- requesting time
+^CTraceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 22, in main
+    time.sleep(1)
+KeyboardInterrupt
+--- creating connection
+--- requesting time
+^CTraceback (most recent call last):
+  File "client.py", line 72, in <module>
+    main()
+  File "client.py", line 22, in main
+    time.sleep(1)
+KeyboardInterrupt
+--- creating connection
+--- requesting time
+--- joining group
+^Z^Z--- notifying group
+^Z^Z--- leaving group
+^Z^Z^Z--- notifying peer

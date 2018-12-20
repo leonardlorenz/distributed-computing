@@ -5,7 +5,7 @@ import receiver
 
 DOMAIN = "88.198.53.236"
 PORT = 80
-PEER = "141.64.167.222"
+PEER = "141.64.170.91"
 FILENAME = "test.txt"
 LINE_END = "\r\n"
 IS_RUNNING = True
@@ -13,16 +13,20 @@ IS_RUNNING = True
 def main():
     print("--- creating connection")
     CONN = create_connection((DOMAIN, PORT), 3)
-    msg_receiver = receiver.receiver(CONN)
-    msg_receiver.start()
+    #msg_receiver = receiver.receiver(CONN)
+    #msg_receiver.start()
     print("--- requesting time")
     request_time(CONN)
+    time.sleep(1)
     print("--- joining group")
     group_join(CONN)
+    time.sleep(1)
     print("--- notifying group")
     group_notify(CONN)
+    time.sleep(1)
     print("--- leaving group")
-    group_leave(CONN)
+    #group_leave(CONN)
+    time.sleep(1)
     print("--- notifying peer")
     peer_notify(CONN)
     while IS_RUNNING:
