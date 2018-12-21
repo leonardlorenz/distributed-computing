@@ -4,8 +4,8 @@ import time
 import group
 import sys
 
-HOST = "88.198.53.236"
-PORT = 80
+HOST = "dbl44.beuth-hochschule.de"
+PORT = 44444
 IS_RUNNING = True
 GROUPS = []
 KNOWN_CLIENTS = []
