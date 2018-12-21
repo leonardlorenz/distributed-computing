@@ -4,7 +4,7 @@ import time
 import group
 import sys
 
-HOST = "dbl44.beuth-hochschule.de"
+HOST = str(socket.gethostbyname(socket.gethostname()))
 PORT = 44444
 IS_RUNNING = True
 GROUPS = []
