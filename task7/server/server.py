@@ -17,7 +17,8 @@ def main():
     try:
         SOCK.bind((HOST, PORT))
         print("bound!")
-    except OSError as msg:
+    except Exception as msg:
+        print("Please run this server as root.")
         print("Bind failed. Error Code : " + str(msg[0]) + " Message " + msg[1])
         SOCK.close()
         sys.exit()
