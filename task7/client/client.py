@@ -41,6 +41,9 @@ def test_server(CONN):
     print("--- leaving group")
     group_leave(CONN)
     time.sleep(1)
+    print("--- leaving group")
+    group_leave(CONN)
+    time.sleep(1)
     print("--- notifying peer")
     peer_notify(CONN)
 
