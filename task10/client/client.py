@@ -27,7 +27,6 @@ def main():
         time.sleep(1)
 
 def peer_notify(CONN):
-    global IS_RUNNING
     while IS_RUNNING:
         user_input = input()
         if user_input is "/quit":
