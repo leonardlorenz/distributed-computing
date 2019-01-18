@@ -20,8 +20,6 @@ class receiver(Thread):
                     print("XXX (" + msg_arr[3] + ")")
                 if msg_arr[1] == "peer notify":
                     print("XXX (" + msg_arr[3] + ")")
-                    file_to_write = open(self.filename, "w")
-                    file_to_write.write(base64.b64decode(msg_arr[4]).decode("utf-8"))
                 if msg_arr[1] == "response time":
                     print("XXX Current server time: " + msg_arr[2])
                 if msg_arr[1] == "error":

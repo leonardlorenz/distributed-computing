@@ -21,13 +21,12 @@ def main():
     msg_receiver = receiver.receiver(CONN, FILENAME)
     msg_receiver.start()
     print("--- notifying peer")
-    CONN = ""
     peer_notify(CONN)
     while True:
         time.sleep(1)
 
 def peer_notify(CONN):
-    while IS_RUNNING:
+    while True:
         user_input = input()
         if user_input is "/quit":
             IS_RUNNING = False
