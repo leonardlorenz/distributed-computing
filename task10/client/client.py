@@ -4,10 +4,10 @@ import time
 import receiver
 import sys
 
-DOMAIN = "141.64.201.154"
-#DOMAIN = "88.198.53.236"
-PORT = 44444
-#PORT = 80
+#DOMAIN = "141.64.201.154"
+DOMAIN = "88.198.53.236"
+#PORT = 44444
+PORT = 80
 PEER = "141.64.170.91"
 KEY = "012345678901234567890123"
 FILENAME = "test.txt"
